@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_finishing">Proximity plugin error: App is finishing</string>
+    <string name="plugin_not_running">Proximity plugin error: Plugin is not running</string>
+</resources>

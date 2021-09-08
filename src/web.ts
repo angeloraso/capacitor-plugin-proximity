@@ -1,10 +1,18 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { ProximityPlugin } from './definitions';
+import type { ProximityPlugin, PROXIMITY, STATUS } from './definitions';
 
 export class ProximityWeb extends WebPlugin implements ProximityPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async getProximity(): Promise<{proximity: PROXIMITY}>{
+    throw this.unimplemented('Not implemented on web.');
+  }
+  async getStatus(): Promise<{status: STATUS}>{
+    throw this.unimplemented('Not implemented on web.');
+  }
+  async start(): Promise<void>{
+    throw this.unimplemented('Not implemented on web.');
+  }
+  async stop(): Promise<void>{
+    throw this.unimplemented('Not implemented on web.');
   }
 }

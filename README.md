@@ -11,9 +11,59 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`getProximity()`](#getproximity)
+* [`getStatus()`](#getstatus)
+* [`start()`](#start)
+* [`stop()`](#stop)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### getProximity()
+
+```typescript
+getProximity() => any
+```
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### getStatus()
+
+```typescript
+getStatus() => any
+```
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### start()
+
+```typescript
+start() => any
+```
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### stop()
+
+```typescript
+stop() => any
+```
+
+**Returns:** <code>any</code>
+
+--------------------
+
 </docgen-api>
