@@ -1,0 +1,57 @@
+{
+  "api": {
+    "name": "ProximityPlugin",
+    "slug": "proximityplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "getProximity",
+        "signature": "() => any",
+        "parameters": [],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PROXIMITY"
+        ],
+        "slug": "getproximity"
+      },
+      {
+        "name": "getStatus",
+        "signature": "() => any",
+        "parameters": [],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "STATUS"
+        ],
+        "slug": "getstatus"
+      },
+      {
+        "name": "start",
+        "signature": "() => any",
+        "parameters": [],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "start"
+      },
+      {
+        "name": "stop",
+        "signature": "() => any",
+        "parameters": [],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stop"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": []
+}
