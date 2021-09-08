@@ -8,7 +8,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.PowerManager;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -58,7 +57,6 @@ public class Proximity implements SensorEventListener {
         mLastAccessTime = System.currentTimeMillis();
         mSensorStatus = SensorStatus.STARTING;
 
-        Log.d("ProximitySensorListener", "XXX enableProximityScreenOff");
         if(mWakeLock != null) {
             mWakeLock.release();
         }
@@ -86,20 +84,14 @@ public class Proximity implements SensorEventListener {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 
     public void onSensorChanged(SensorEvent event) {
-        SensorResult proximity;
-
-        Log.d("ProximitySensorListener", "XXX onSensorChanged sensor length -> " + event.values.length);
-        Log.d("ProximitySensorListener", "XXX onSensorChanged [0]-> " + event.values[0] + " [1]-> " + event.values[1] + " [2]-> " + event.values[2]);
-
         if (event.values[0] == 0) {
-            proximity = SensorResult.NEAR;
+            mSensorResult = SensorResult.NEAR;
         } else {
-            proximity = SensorResult.FAR;
+            mSensorResult = SensorResult.FAR;
         }
 
         // Save proximity
         mTimeStamp = System.currentTimeMillis();
-        mSensorResult = proximity;
         mSensorStatus = SensorStatus.RUNNING;
 
         // If proximity hasn't been read for TIMEOUT time, then turn off sensor to save power
